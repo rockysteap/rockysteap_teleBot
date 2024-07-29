@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import webbrowser
 
-from my_token import keys
+from data import keys
 
 # print(keys.TOKEN)
 bot = telebot.TeleBot(token=keys.MY_TOKEN)
@@ -56,7 +56,7 @@ def start(message):
     btn3 = types.KeyboardButton('Изменить текст')
     markup.row(btn1)
     markup.row(btn2, btn3)
-    file = open('./my_token/photo.jpg', 'rb')
+    file = open('data/photo.jpg', 'rb')
     # bot.send_photo(message.chat.id, file, reply_markup=markup)
     # bot.send_audio(message.chat.id, file, reply_markup=markup)
     # bot.send_video(message.chat.id, file, reply_markup=markup)
